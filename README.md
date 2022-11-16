@@ -1,0 +1,58 @@
+# nested-table
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested tables</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            border: 3px solid black;
+        }
+
+        th, td {
+            border: 2px solid blue; 
+            padding: 10px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <table id="table1">
+        <tr><th colspan="3" scope="colgroup">A</th></tr>
+        <tr>
+            <th scope="col">a1</th>
+            <th scope="col">a2</th>
+            <th scope="col">a3</th>
+        </tr>
+
+        <tr>
+            <td id="nested">
+                <table id="table2">                 
+                    <tr>
+                        <th rowspan="3" scope="rowgroup">B</th>
+                        <td>b1</td>
+                    </tr>
+                    <tr><td>b2</td></tr>
+                    <tr><td>b3</td></tr>
+                    <!-- <td>b1</td>
+                    <td>b2</td>
+                    <td>b3</td> -->
+                </table>
+            </td>
+            <td>c1</td>
+            <td>c2</td>
+        </tr>
+
+        <tr>
+            <td>d1</td>
+            <td>d2</td>
+            <td>d3</td>
+        </tr>
+    </table>
+</body>
+</html>
